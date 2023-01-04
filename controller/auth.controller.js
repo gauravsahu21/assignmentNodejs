@@ -22,10 +22,10 @@ const postLogin=async(req,res)=>{
      {  console.log("ccccc",result[0]._id);
         const token= await generateToken(result[0]._id);
         console.log("token12",token);
-        // res.cookie("token",token,{
-        //     maxAge:60*60*1000,
-        //     httpOnly:true
-        // })
+        res.cookie("jwt",token,{
+            maxAge:60*60*1000,
+            httpOnly:true
+        })
      res.status(200).json({username,isLogged:true,token});}
      else
      {

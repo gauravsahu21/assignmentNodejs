@@ -72,6 +72,7 @@ const generateToken=async(userId)=>{
 };
 const findById=async(id)=>{
     try{
+        console.log("idid",id);
         const user=await authModel.findById(id);
         return user;
 

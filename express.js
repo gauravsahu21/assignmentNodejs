@@ -54,6 +54,6 @@ mongoose.connect('mongodb://127.0.0.1:27017').then(()=>{
 })
 app.use(passport.initialize());
 passport.use("jwt",jwtStrategy);
-app.use(verifyAuth);
+ //app.use(verifyAuth);
 app.use(express.json());//used as middleware to read request.body
 app.use('/v1',authRoutes);

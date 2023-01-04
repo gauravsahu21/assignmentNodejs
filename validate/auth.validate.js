@@ -17,11 +17,11 @@ const verifyAuth=(req,res,next)=>{
     console.log("env password",process.env.route_password);
     if(!authorization)
     {
-        return res.status(403).json({message:"unauthorized"})
+        return res.status(403).json({message:"unauthorized123"})
     }
     if(authorization!==process.env.route_password)
     {
-        return res.status(403).json({message:"unauthorized"})
+        return res.status(403).json({message:"unauthorized123"})
     }
     next();
 }

@@ -10,8 +10,8 @@ const verify=async(payload,done)=>{
 
     try{   console.log("payload",payload);
 
-        const user=await findById(payload.userid);
-        console.log(user);
+        const user=await findById(payload.userId);
+        console.log(user,"[[[]]]");
          if(!user)
          {
             return done(null,false);
