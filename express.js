@@ -35,6 +35,7 @@ const app=express();
  const authRoutes=require('./routes/auth.routes.js');
 const mongoose=require('mongoose');
 const {verifyAuth}=require('./validate/auth.validate.js');
+const categoryRoutes=require('./routes/catergory.routes');
 const passport=require('passport');
 const jwtStrategy=require('./config/passport');
 
@@ -57,3 +58,4 @@ passport.use("jwt",jwtStrategy);
  //app.use(verifyAuth);
 app.use(express.json());//used as middleware to read request.body
 app.use('/v1',authRoutes);
+app.use('/v2',categoryRoutes);
