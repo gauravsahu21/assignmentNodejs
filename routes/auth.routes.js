@@ -9,4 +9,5 @@ const authenticate=passport.authenticate("jwt",{session:false});
 router.post('/signup',validateSignup,postSignup);
 router.post('/login',validateLogin,postLogin);
 router.get('/disc',authenticate,discussion);
+
 module.exports=router;
